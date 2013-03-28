@@ -58,11 +58,11 @@ const SB_PROPERTY_WAVEFORM = NS + "waveformURL";
 const SB_PROPERTY_DOWNLOAD_IMAGE = NS + "downloadImage";
 const SB_PROPERTY_DOWNLOAD_URL = NS + "downloadURL";
 
-const SOCL_URL = "https://api.sandbox-soundcloud.com";
+const SOCL_URL = "https://api.soundcloud.com";
 const AUTH_PAGE = "chrome://soundcloud/content/soundcloudAuthorize.xul";
 const DEFAULT_AVATAR = "chrome://soundcloud/skin/default-avatar.png";
-const CONSUMER_SECRET = "wyptkfjC6jnY6Trm3XLTU6zrGcc6wT5eufuYqCp5xY";
-const CONSUMER_KEY = "PvM7UwxkoLr8KBgHlYQjcg";
+const CONSUMER_SECRET = "dc347e54c22a9c8920258eedb9326821";
+const CONSUMER_KEY = "a99dec5988f844a1ad26fff7c34a4108";
 const SIG_METHOD = "HMAC-SHA1";
 
 const MAX_RETRIES = 5;
@@ -1055,7 +1055,7 @@ function sbSoundCloudService() {
     radioFolder = this._servicePaneService.createNode();
     radioFolder.id = "SB:RadioStations";
     radioFolder.className = "folder radio";
-    radioFolder.name = this._strings.GetStringFromName("radioFolderLabel");
+    radioFolder.name = SBString("servicesource.radio");
     radioFolder.setAttributeNS(SB_NS, "radioFolder", 1); // for backward-compat
     radioFolder.setAttributeNS(SP_NS, "Weight", 2);
     this._servicePaneService.root.appendChild(radioFolder);
